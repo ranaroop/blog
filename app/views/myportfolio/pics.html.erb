@@ -1,3 +1,6 @@
+
+
+
 My portfolio pics (aboutme on robby's example)
 
 <%= link_to('google', 'http://google.com')%>
@@ -15,32 +18,27 @@ My portfolio pics (aboutme on robby's example)
 
 
 <!--loop-->
-<% 1.upto(100).each do |variable_width| %>
+<% 1.upto(50).each do |variable_width| %>
 	<img 
 	src="http://www.ryanseacrest.com/wp-content/uploads/2012/08/Boo-The-Dog.jpg"
     style="width: <%= variable_width %>px;" 
 />
 
 <% end %>
+
 <hr/>
 
-<% image_urls = [
-	'https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/t1.0-9/1560656_10152670763173254_4200004522404042888_n.jpg', 
-	'http://www.boothedog.net/wp-content/uploads/2011/07/Boo-The-Dog-sad.jpg', 
-	'http://upload.dogzer.com/img_global/4-chien/_light-122116-boo.jpg'  
+<%= image_tag('3425436.jpg') %>
 
-	] %>
+<hr/>
 
 
-<% image_urls.each do |pic|  %>
 
 
-<a href="<%= pic %>">
-  <img src="<%= pic %>">
+<% @image_urls.each do |name|  %>
+	<a href="<%= image_url(name) %>">
+    <%= image_tag(name) %>
 </a>
-
-
-
 <% end %>
 
 
