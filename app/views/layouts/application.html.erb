@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <header>This is my header</header>
 
 <hr/>
@@ -19,6 +18,18 @@
 <i>what's going on with this page?</i>
 <hr/>
 
-<footer>This is my footer</footer>
+
+<% if @user_name != nil %>
+	Hello <%= @user_name.capitalize %>
+<% end %>	
+
+
+<hr/>
+
+
+<p> bubble: <%= @first_visit %> </p>
+<p> New Visit: <%= @message %> </p>
+
+
 </body>
 </html>
